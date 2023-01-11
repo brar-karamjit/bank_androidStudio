@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/NameOfClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:text="Name of client"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/InitialBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Initial Balance"
+        app:layout_constraintStart_toStartOf="@+id/NameOfClient"
+        app:layout_constraintTop_toBottomOf="@+id/NameOfClient" />
+
+    <TextView
+        android:id="@+id/serviceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="Service Type"
+        app:layout_constraintStart_toStartOf="@+id/InitialBalance"
+        app:layout_constraintTop_toBottomOf="@+id/InitialBalance" />
+
+    <TextView
+        android:id="@+id/fromAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="From Account"
+        app:layout_constraintStart_toStartOf="@+id/serviceType"
+        app:layout_constraintTop_toBottomOf="@+id/serviceType" />
+
+    <TextView
+        android:id="@+id/toAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="To Account"
+        app:layout_constraintStart_toStartOf="@+id/fromAccount"
+        app:layout_constraintTop_toBottomOf="@+id/fromAccount" />
+
+    <TextView
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Value"
+        app:layout_constraintStart_toStartOf="@+id/toAccount"
+        app:layout_constraintTop_toBottomOf="@+id/toAccount" />
+
+    <Button
+        android:id="@+id/buttonAddNewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="computebuttonAddaNewAccount"
+        android:text="ADD A NEW ACCOUNT"
+        app:layout_constraintBottom_toTopOf="@+id/serviceType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InitialBalance" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="186dp"
+        android:layout_height="38dp"
+        android:entries="@array/spinner"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/serviceType"
+        app:layout_constraintEnd_toEndOf="@+id/InitialBalanceInput"
+        app:layout_constraintTop_toTopOf="@+id/serviceType" />
+
+    <EditText
+        android:id="@+id/InitialBalanceInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/InitialBalance"
+        app:layout_constraintEnd_toEndOf="@+id/ClientNameInput"
+        app:layout_constraintTop_toTopOf="@+id/InitialBalance" />
+
+    <EditText
+        android:id="@+id/fromAccountInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/fromAccount"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/fromAccount" />
+
+    <EditText
+        android:id="@+id/toAccountInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/toAccount"
+        app:layout_constraintEnd_toEndOf="@+id/fromAccountInput"
+        app:layout_constraintTop_toTopOf="@+id/toAccount" />
+
+    <EditText
+        android:id="@+id/valueInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/value"
+        app:layout_constraintEnd_toEndOf="@+id/toAccountInput"
+        app:layout_constraintTop_toTopOf="@+id/value" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="computebuttonConfirm"
+        android:text="CONFIRM"
+        app:layout_constraintStart_toStartOf="@+id/value"
+        app:layout_constraintTop_toTopOf="@+id/computationResults" />
+
+    <TextView
+        android:id="@+id/computationResults"
+        android:layout_width="211dp"
+        android:layout_height="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/valueInput"
+        app:layout_constraintTop_toBottomOf="@+id/valueInput" />
+
+    <EditText
+        android:id="@+id/ClientNameInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/NameOfClient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/NameOfClient" />
+</androidx.constraintlayout.widget.ConstraintLayout>

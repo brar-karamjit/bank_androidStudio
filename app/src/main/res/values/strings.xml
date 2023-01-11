@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Bank App - Karamjit Brar (217732793)</string>
+    <string-array name="spinner">
+        <item>Deposit</item>
+        <item>Withdraw</item>
+        <item>Transfer</item>
+        <item>Print Statement</item>
+
+    </string-array>
+</resources>
