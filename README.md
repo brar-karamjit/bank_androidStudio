@@ -23,31 +23,6 @@ This project is a banking application developed using Android Studio as part of 
 
 The application is designed to provide a hands-on experience in building Android apps while reinforcing object-oriented programming principles.
 
-## Project Structure
-
-bank_androidStudio/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/eecs1022/lab7/bank/
-│   │   │   │   ├── MainActivity.java
-│   │   │   │   ├── model/
-│   │   │   │   │   ├── Bank.java
-│   │   │   │   │   ├── Client.java
-│   │   │   │   │   ├── Transaction.java
-│   │   │   ├── res/
-│   │   │       ├── values/
-│   │   │       │   ├── strings.xml
-│   │   │       ├── values-night/
-│   │   │       │   ├── themes.xml
-│   ├── build.gradle
-│   ├── proguard-rules.pro
-├── gradle/
-│   ├── wrapper/
-│       ├── gradle-wrapper.properties
-├── build.gradle
-├── settings.gradle
-
 ## How to Run
 
 ### Prerequisites
